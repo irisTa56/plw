@@ -6,9 +6,6 @@ module "service_accounts" {
 
   project_id = var.GCP_PROJECT_ID
   names      = ["test-sa"]
-  # project_roles = [
-  #   "${var.GCP_PROJECT_ID}=>roles/run.invoker",
-  # ]
 }
 
 module "cloud_run" {
