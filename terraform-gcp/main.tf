@@ -18,10 +18,12 @@ module "cloud_run" {
   source  = "GoogleCloudPlatform/cloud-run/google"
   version = "~> 0.9.0"
 
-  service_name          = "test-hello"
-  project_id            = var.GCP_PROJECT_ID
-  location              = var.region
-  image                 = "gcr.io/cloudrun/hello"
+  service_name = "test-hello"
+  project_id   = var.GCP_PROJECT_ID
+  location     = var.region
+  image        = "gcr.io/cloudrun/hello"
+
+  container_concurrency = 1
   members               = ["allUsers"]
   service_account_email = module.service_accounts.email
 }
