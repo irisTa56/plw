@@ -1,0 +1,6 @@
+*
+!/src/**
+!/style/**
+!/Cargo.toml
+!/tailwind.config.js
+**/.DS_Store

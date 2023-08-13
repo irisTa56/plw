@@ -9,3 +9,10 @@ $ npx playwright install
 $ cd ..
 $ cargo leptos end-to-end
 ```
+
+## Build and run Docker container
+
+```shell-session
+$ docker-buildx build -t "<image>:<tag>" .
+$ docker run -it -p 8080:8080 --rm <image>
+```
